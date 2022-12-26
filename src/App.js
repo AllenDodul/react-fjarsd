@@ -1,5 +1,7 @@
 import React from "react";
+import Todos from "./Todos";
 import "./style.css";
+
 
 const todos = [
   {
@@ -17,7 +19,8 @@ const todos = [
 export default function App() {
   return (
     <div>
-      
+      <h1>Todo App</h1>
+      <Todos getTodos={todos}/>
     </div>
   );
 }
