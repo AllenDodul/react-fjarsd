@@ -1,0 +1,10 @@
+.todoCard{
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.todoCard:hover{
+  cursor: pointer;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+}

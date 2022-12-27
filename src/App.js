@@ -1,4 +1,6 @@
 import React from "react";
+
+import NewTodo from "./NewTodo"
 import Todos from "./Todos";
 import "./style.css";
 
@@ -18,8 +20,9 @@ const todos = [
 
 export default function App() {
   return (
-    <div>
-      <h1>Todo App</h1>
+    <div className="app">
+      <h1 className="title">Todo App</h1>
+      <NewTodo />
       <Todos getTodos={todos}/>
     </div>
   );
