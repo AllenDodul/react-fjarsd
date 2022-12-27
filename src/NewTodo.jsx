@@ -6,12 +6,13 @@ const NewTodo = () =>{
     <form className={style.form}>
       <div className={style.inputBox}>
         <input 
+          className={style.inputFild}
           type="text"
         />
-        <textarea/>
+        <textarea className={style.inputFild}/>
       </div>
       <div>
-        <button>Add Todo</button>
+        <button className={style.btn}>Add Todo</button>
       </div>
     </form>
   )

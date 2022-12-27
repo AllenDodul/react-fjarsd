@@ -1,10 +1,30 @@
 .form{
   display:flex;
   flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  margin: 10px 0px;
+  width: 60%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 .inputBox{
   display: flex;
   flex-direction: column;
   margin: 10px 0px;
   width: 100%;
+}
+.inputFild{
+  margin :5px 0px;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+}
+.btn{
+  height: 35px;
+  width:100%;
+  background: royalblue;
+  color: white;
+  border: none;
+  outline: none;
 }
