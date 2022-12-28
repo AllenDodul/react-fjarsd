@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 import NewTodo from "./NewTodo"
 import Todos from "./Todos";
@@ -19,10 +19,16 @@ const todos = [
 ];
 
 export default function App() {
+  const [allTodos, setAllTodos] = useState([]);
+
+  const getNewTodo = (todo) =>{
+    console.log(todo);
+  }
+
   return (
     <div className="app">
       <h1 className="title">Todo App</h1>
-      <NewTodo />
+      <NewTodo  getNewTodo={getNewTodo}/>
       <Todos getTodos={todos}/>
     </div>
   );
