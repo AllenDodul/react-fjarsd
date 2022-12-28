@@ -6,7 +6,7 @@ const Todos = (props) => {
   return(
     <div className={style.todoContainer}>
       {props.getTodos.map((todo)=>
-       <Todo todo={todo}/>
+       <Todo todo={todo.todo}/>
       )}
     </div>
   )
