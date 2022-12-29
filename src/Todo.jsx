@@ -1,13 +1,22 @@
 import React from "react";
 import style from "./todo.module.css";
-import {v4 as uuidv4} from "uuid";
 
 const Todo = (props) => {
   const {title, desc} = props.todo;
+
+  const handleRemoveTodo = () =>{
+    props.getId(props.id);
+  }
+
   return(
-    <div className={style.todoCard} key={uuidv4()}>
-      <h2>{title}</h2>
-      <p>{desc}</p>
+    <div className={style.todoCard}>
+      <div>
+        <h2>{title}</h2>
+        <p>{desc}</p>
+      </div>
+      <div>
+        <button type="submit" onClick={handleRemoveTodo}>Delete</button>
+      </div>
     </div>
   )
 }

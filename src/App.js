@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 
+import {v4 as uuidv4} from "uuid";
 import NewTodo from "./NewTodo"
 import Todos from "./Todos";
 import "./style.css";
@@ -10,15 +11,19 @@ export default function App() {
 
   const getNewTodo = (todo) =>{
     setAllTodos((oldTodo)=>{
-      return [...oldTodo, {todo}];
+      return [...oldTodo, {id: uuidv4(), todo}];
     });
+  }
+
+  const removeTodo = (id) =>{
+    alert(id);
   }
 
   return (
     <div className="app">
       <h1 className="title">Todo App</h1>
       <NewTodo  getNewTodo={getNewTodo}/>
-      <Todos getTodos={allTodos}/>
+      <Todos getTodos={allTodos} getId={removeTodo}/>
     </div>
   );
 }
