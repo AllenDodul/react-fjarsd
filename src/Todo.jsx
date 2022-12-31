@@ -5,8 +5,8 @@ const Todo = (props) => {
   const {title, desc} = props.todo;
 
   const handleRemoveTodo = () =>{
-    props.getId(props.id);
-  }
+    props.onRemoveTodos(props.id);
+  };
 
   return(
     <div className={style.todoCard}>

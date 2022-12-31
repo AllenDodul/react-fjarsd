@@ -15,15 +15,18 @@ export default function App() {
     });
   }
 
-  const removeTodo = (id) =>{
-    alert(id);
+  const handleRemoveTodos = (id) =>{
+    setAllTodos((prevTodos)=>{
+      const filterdTodos = prevTodos.filter((todo)=> todo.id !== id);
+      return filterdTodos;
+    });
   }
 
   return (
     <div className="app">
       <h1 className="title">Todo App</h1>
       <NewTodo  getNewTodo={getNewTodo}/>
-      <Todos getTodos={allTodos} getId={removeTodo}/>
+      <Todos getTodos={allTodos} onRemoveTodos={handleRemoveTodos}/>
     </div>
   );
 }
